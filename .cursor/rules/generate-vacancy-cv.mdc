@@ -1,0 +1,65 @@
+---
+description: Generate a tailored CV for a job vacancy from a link or attached file; outputs YAML in src/vacancies/ and PDF in pdf/vacancies/
+globs: 
+alwaysApply: false
+---
+
+# Generate CV for Vacancy
+
+Use this rule when the user asks to generate a CV for a specific job vacancy and provides either a **link** to the job description or an **attached file** (text/PDF) with the position description.
+
+## Trigger
+
+- User says something like: "Сгенерируй CV под эту вакансию", "Generate CV for this job", "Резюме под вакансию", "CV for this vacancy".
+- User provides a **URL** to a job posting or **attaches a file** with the job description.
+
+## Steps (execute in order)
+
+### 1. Get the job description text
+
+- **If user gave a URL:** Fetch the page content (e.g. with mcp_web_fetch or similar). Extract the main text: company/product name, role title, requirements (technologies, experience, responsibilities).
+- **If user attached a file:** Read the file content. If PDF, extract text; identify company, role, key requirements and responsibilities.
+
+### 2. Choose base template(s)
+
+- Use **src/Anton_Vusatyi_CV_Senior_Software_Engineer.yaml**, **src/Anton_Vusatyi_CV_Lead_Software_Engineer.yaml**, or **src/Anton_Vusatyi_CV_Fullstack_Software_Engineer.yaml** as the source of facts (name, contact, experience, projects, education, etc.).
+- Pick the template that best matches the role (backend/senior → SSE; lead/team lead → Lead; fullstack/frontend-heavy → Fullstack). You may use data from multiple templates but do not invent new facts or dates.
+
+### 3. Build tailored YAML
+
+- **cv.headline:** Set to the role from the vacancy (e.g. "Senior Backend Engineer", "Fullstack Developer"). Use exact or close wording from the job title.
+- **Summary:** 3–4 bullet points. Keep facts from the base template but rephrase to align with the vacancy: emphasize technologies and experience that match the job requirements; use the same structure (strings in a list; quote any line that contains `*` to avoid YAML alias issues).
+- **skills:** Reorder or slightly rephrase so that the most relevant skills for the vacancy appear first or are emphasized. Do not add skills the candidate does not have in the base templates.
+- **experience / projects / education / Certificates / Volunteering / publications / Research & Writing:** Copy from the base template. Do not invent new entries or dates. You may lightly reword summary/highlights to use keywords from the vacancy where they genuinely apply.
+- **Structure:** The YAML must have the same root keys as the existing CVs: `cv` (with `name`, `headline`, `location`, `email`, `phone`, `social_networks`, `custom_connections`, `sections`), then `locale` (e.g. `language: english`), then `settings` (with `current_date` and `render_command`). Do **not** include a `design` block; design is loaded from **design.yaml** at render time.
+- **RenderCV syntax:** Dates as `YYYY-MM`; use `end_date: present` where applicable; quote strings that contain `*` (e.g. `'**text**'`).
+
+### 4. File naming
+
+- Use format: **Anton_Vusatyi_<CompanySlug>_<RoleSlug>.yaml**
+- CompanySlug and RoleSlug: short Latin identifiers, no spaces (e.g. Acme, Senior_Backend_Engineer).
+- Example: **Anton_Vusatyi_Acme_Senior_Backend_Engineer.yaml**
+
+### 5. Save YAML
+
+- Ensure directories exist: **src/vacancies/** and **pdf/vacancies/**.
+- Write the tailored YAML to **src/vacancies/<filename>.yaml** (same filename as above, with `.yaml`).
+
+### 6. Run render
+
+- From the **project root**, run:
+  **task build-vacancy -- <filename_base>**
+  where `<filename_base>` is the filename without `.yaml` (e.g. `Anton_Vusatyi_Acme_Senior_Backend_Engineer`).
+- This task renders **src/vacancies/<filename_base>.yaml** with **design.yaml** and writes the PDF to **pdf/vacancies/<filename_base>.pdf**.
+
+### 7. Report to user
+
+- Tell the user that the CV was generated and give:
+  - **YAML:** src/vacancies/<filename>.yaml
+  - **PDF:** pdf/vacancies/<filename_base>.pdf
+
+## Important
+
+- **Do not invent** experience, dates, companies, or skills. Use only data from the existing CV templates and the vacancy text.
+- Keep RenderCV schema compliance: first line of the YAML file should be the schema directive: `# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.6/schema.json`
+- In **settings.render_command**, you can leave generic paths or mirror the pattern from the base template; the CLI `--pdf-path` in the Taskfile overrides the PDF output path.

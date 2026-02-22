@@ -15,3 +15,8 @@ tasks:
     desc: Generate Fullstack Software Engineer CV (PDF to pdf/)
     cmds:
       - uv run rendercv render src/Anton_Vusatyi_CV_Fullstack_Software_Engineer.yaml --design ../design.yaml --pdf-path ../pdf/Anton_Vusatyi_CV_Fullstack_Software_Engineer.pdf -nomd -nohtml -nopng
+
+  build-vacancy:
+    desc: Render a vacancy CV from src/vacancies/ to pdf/vacancies/ (usage: task build-vacancy -- <filename_without_extension>)
+    cmds:
+      - uv run rendercv render src/vacancies/{{.CLI_ARGS}}.yaml --design ../../design.yaml --pdf-path ../../pdf/vacancies/{{.CLI_ARGS}}.pdf -nomd -nohtml -nopng

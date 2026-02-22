@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.6/schema.json
 cv:
   name: Anton Vusatyi
-  headline: Senior Software Engineer
+  headline: Lead Software Engineer
   location: Istanbul, Turkey
   email: anton@vusatui.com
   photo:
@@ -15,13 +15,15 @@ cv:
   custom_connections:
   sections:
     Summary:
-      - Senior Software Engineer with 9+ years of experience building **scalable**, **fault-tolerant** **distributed systems** and backend services on **Node.js** / **TypeScript**, with working proficiency in Java, Go and Python.
-      - Strong focus on **architecture**, **reliability**, and **performance** — systems handling **~200 RPS** with **P95 ≤ 500 ms**, **zero-downtime deployments**, and mature **CI/CD** practices.
-      - Experienced in event-driven/microservice architectures, system design, observability, and **IaC**; led cross-functional teams and mentored 20+ engineers.
+      - 'Lead Software Engineer with 9+ years of experience in **full-stack** and **cloud-native** development; strong focus on **scalable**, **fault-tolerant** **distributed systems** and modern backend/frontend stacks with **DevOps** practices.'
+      - 'Passionate about **systems design**, **architecture**, and optimization; ongoing **research in distributed computing**. Delivered complex projects on time with high reliability (**~200 RPS**, **P95 ≤ 500 ms**, **zero-downtime** releases, mature **CI/CD**).'
+      - '**Led cross-functional teams of up to 10 engineers**; mentored 20+ engineers and facilitated architecture review sessions. Experienced in event-driven/microservice architectures, **IaC**, and observability.'
       - 'Introduced **AI** into development and management processes, improving productivity several times.'
     skills:
       - label: Programming
         details: '**TypeScript**, JavaScript (Advanced); **Java**, **Python**, **Go** (Working proficiency); **SQL**'
+      - label: Frontend
+        details: '**React**, **Next.js**, **Vue**, Nuxt, TypeScript'
       - label: Backend
         details: '**Node.js** (NestJS, Express), Java (Spring Boot), GraphQL, REST, RPC, WebSockets'
       - label: Data & Storage
@@ -316,11 +318,11 @@ settings:
   render_command:
     design:
     locale:
-    typst_path: ../rendercv_output/Anton_Vusatyi_CV_Senior_Software_Engineer.typ
-    pdf_path: ../rendercv_output/Anton_Vusatyi_CV_Senior_Software_Engineer.pdf
-    markdown_path: ../rendercv_output/Anton_Vusatyi_CV_Senior_Software_Engineer.md
-    html_path: ../rendercv_output/Anton_Vusatyi_CV_Senior_Software_Engineer.html
-    png_path: ../rendercv_output/Anton_Vusatyi_CV_Senior_Software_Engineer.png
+    typst_path: ../rendercv_output/Anton_Vusatyi_CV_Lead_Software_Engineer.typ
+    pdf_path: ../rendercv_output/Anton_Vusatyi_CV_Lead_Software_Engineer.pdf
+    markdown_path: ../rendercv_output/Anton_Vusatyi_CV_Lead_Software_Engineer.md
+    html_path: ../rendercv_output/Anton_Vusatyi_CV_Lead_Software_Engineer.html
+    png_path: ../rendercv_output/Anton_Vusatyi_CV_Lead_Software_Engineer.png
     dont_generate_markdown: false
     dont_generate_html: false
     dont_generate_typst: false

@@ -1,0 +1,7 @@
+version: '3'
+
+tasks:
+  build-sse:
+    desc: Alias for default — generate CV outputs
+    cmds:
+      - uv run rendercv render src/Anton_Vusatyi_CV_Senior_Software_Engineer.yaml --pdf-path ../pdf/Anton_Vusatyi_CV_Senior_Software_Engineer.pdf -nomd -nohtml -nopng 

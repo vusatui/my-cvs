@@ -1,0 +1,328 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.6/schema.json
+cv:
+  name: Anton Vusatyi
+  headline: Senior Software Engineer
+  location: Istanbul, Turkey
+  email: anton@vusatui.com
+  photo:
+  phone: '+90 507 445 38 09'
+  website:
+  social_networks:
+    - network: LinkedIn
+      username: vusatui
+    - network: GitHub
+      username: vusatui
+  custom_connections:
+  sections:
+    Summary:
+      - Senior Software Engineer with 9+ years of experience building **scalable**, **fault-tolerant** **distributed systems** and backend services on **Node.js** / **TypeScript**, with working proficiency in Java, Go and Python.
+      - Strong focus on **architecture**, **reliability**, and **performance** — systems handling **~200 RPS** with **P95 ≤ 500 ms**, **zero-downtime deployments**, and mature **CI/CD** practices.
+      - Experienced in event-driven/microservice architectures, system design, observability, and **IaC**; led cross-functional teams and mentored 20+ engineers.
+    skills:
+      - label: Programming
+        details: '**TypeScript**, JavaScript (Advanced); **Java**, **Python**, **Go** (Working proficiency); **SQL**'
+      - label: Backend
+        details: '**Node.js** (NestJS, Express), Java (Spring Boot), GraphQL, REST, RPC, WebSockets'
+      - label: Data & Storage
+        details: Relational and NoSQL datastores (*PostgreSQL*, *Redis*, *MongoDB* etc.)
+      - label: Cloud & DevOps
+        details: '**AWS**, Azure, Docker, **IaC**, **CI/CD** (GitHub Actions, Jenkins)'
+      - label: Architecture & Practices
+        details: '**Distributed Systems**, **Scalability**, **Fault Tolerance**, Event-Driven Architecture, Message Queues & Stream Processing, **Observability**, System Design'
+    experience:
+      - company: EPAM Systems
+        position: Software Engineer → Lead Software Engineer
+        date:
+        start_date: 2021-09
+        end_date: present
+        location: Istanbul, Turkey
+        summary: Led modernization of an enterprise platform; owned architecture, reliability, and delivery at scale.
+        highlights:
+          - Designed and operated backend services handling **~200 RPS** with **P95 ≤ 500 ms** and **zero-downtime** releases.
+          - Built **event-driven** cloud-native components using **AWS SQS** and **Lambda** for async communication between microservices.
+          - Developed data-processing pipelines on **Azure Durable Functions** (Excel ingestion → validation → reporting) with idempotent steps and retries.
+          - Integrated microservices via **Azure Event Hub** to enable data platform streaming and ingestion.
+          - Optimized **CI/CD** pipelines **(60 → 15 min)** and reduced MTTR via automation and observability improvements.
+          - Mentored 20+ engineers and facilitated architecture review sessions across teams.
+      - company: MEDIA5
+        position: Software Engineer
+        date:
+        start_date: 2021-04
+        end_date: 2021-09
+        location: Moscow, Russia
+        summary: Built platform for automated promo-site deployment; focused on developer experience and runtime efficiency.
+        highlights:
+          - Designed reusable delivery system → *reduced infrastructure costs ~3× and development time ~10×*.
+          - Delivered '*Node.js*' services and '*CI/CD*' integrations for templated provisioning.
+      - company: Piramis
+        position: Software Engineer
+        date:
+        start_date: 2019-07
+        end_date: 2021-04
+        location: Novorossiysk, Russia
+        summary: Led development of a scalable web platform; introduced monitoring and modular architecture.
+        highlights:
+          - Scaled application to **40K DAU**.
+          - Delivered features driving **~17× monthly revenue growth** over 2 years.
+          - Built internal package library → halved feature delivery time.
+      - company: SITEMADEPRO
+        position: Software Engineer
+        date:
+        start_date: 2017-03
+        end_date: 2019-07
+        location: Novorossiysk, Russia
+        summary: Delivered commercial web projects and improved team efficiency through internal frameworks.
+        highlights:
+          - Delivered 13+ projects end-to-end; introduced shared framework → delivery speed ×3.
+          - Strengthened CI and testing for higher release stability.
+    projects:
+      - name: Shestakov Yacht Sales — Platform Revamp
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: Cloud / backend modernization for a global yacht marketplace.
+        highlights:
+          - Re-architected backend infra **(Next.js + Node.js + NestJS + NATS + IaC)** with defined SLOs and monitoring.
+          - Implemented **PostgreSQL-based queue** for batched and parallel updates to optimize write throughput.
+          - Improved deployment and page performance; enhanced user experience **×2**.
+      - name: Bizii — AI-Assisted Trademark Platform
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: Designed backend architecture and CI/CD for an **AI-driven B2B platform**.
+        highlights:
+          - Built '*TypeScript*' backend on '*Supabase*' / '*Vercel*'; implemented '*RAG-style pipelines*' for automation.
+    publications:
+      - title: Architectural Approaches to Building Highly Available Distributed Systems
+        authors:
+          - '*Anton Vusatyi*'
+        summary:
+        doi:
+        url: https://bit.ly/43rDciz
+        journal: Research note
+        date: 2025-05
+      - title: Theoretical and Methodological Foundations for the Development of Distributed Systems in the Context of Digital Transformation
+        authors:
+          - '*Anton Vusatyi*'
+        summary:
+        doi:
+        url: https://7universum.com/ru/tech/archive/item/20317
+        journal: Research note
+        date: 2025-06
+    Research & Writing:
+      - name: Message Broker Workshop
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: Hands-on research of broker semantics for write-heavy systems; formalized in GitHub with documentation. Ongoing.
+        highlights:
+          - Exploring trade-offs between at-most-once, at-least-once, and exactly-once processing.
+          - Practical experiments with RabbitMQ Streams, Kafka Streams, and AMQP batching; benchmarks and analysis in progress.
+    education:
+      - institution: Moscow Humanitarian University
+        area: General
+        degree:
+        date:
+        start_date: 2015-09
+        end_date: 2019-08
+        location: Moscow, Russia
+        summary:
+        highlights: []
+    Certificates:
+      - bullet: AWS Developer Associate
+      - bullet: PMI Certified (Project Management)
+    Volunteering:
+      - company: EPAM Systems
+        position: Technical Interviewer / Mentor
+        date:
+        start_date: 2023-01
+        end_date: present
+        location:
+        summary: Conduct technical interviews, mentor engineers, and support career growth programs.
+        highlights: []
+design:
+  theme: engineeringresumes
+  page:
+    size: "a4"
+  # page:
+  #   size: us-letter
+  #   top_margin: 0.7in
+  #   bottom_margin: 0.7in
+  #   left_margin: 0.7in
+  #   right_margin: 0.7in
+  #   show_footer: true
+  #   show_top_note: true
+  # colors:
+  #   body: rgb(0, 0, 0)
+  #   name: rgb(0, 79, 144)
+  #   headline: rgb(0, 79, 144)
+  #   connections: rgb(0, 79, 144)
+  #   section_titles: rgb(0, 79, 144)
+  #   links: rgb(0, 79, 144)
+  #   footer: rgb(128, 128, 128)
+  #   top_note: rgb(128, 128, 128)
+  # typography:
+  #   line_spacing: 0.6em
+  #   alignment: justified
+  #   date_and_location_column_alignment: right
+  #   font_family:
+  #     body: Source Sans 3
+  #     name: Source Sans 3
+  #     headline: Source Sans 3
+  #     connections: Source Sans 3
+  #     section_titles: Source Sans 3
+  #   font_size:
+  #     body: 10pt
+  #     name: 30pt
+  #     headline: 10pt
+  #     connections: 10pt
+  #     section_titles: 1.4em
+  #   small_caps:
+  #     name: false
+  #     headline: false
+  #     connections: false
+  #     section_titles: false
+  #   bold:
+  #     name: true
+  #     headline: false
+  #     connections: false
+  #     section_titles: true
+  # links:
+  #   underline: false
+  #   show_external_link_icon: false
+  # header:
+  #   alignment: center
+  #   photo_width: 3.5cm
+  #   photo_position: left
+  #   photo_space_left: 0.4cm
+  #   photo_space_right: 0.4cm
+  #   space_below_name: 0.7cm
+  #   space_below_headline: 0.7cm
+  #   space_below_connections: 0.7cm
+  #   connections:
+  #     phone_number_format: national
+  #     hyperlink: true
+  #     show_icons: true
+  #     display_urls_instead_of_usernames: false
+  #     separator: ''
+  #     space_between_connections: 0.5cm
+  # section_titles:
+  #   type: with_partial_line
+  #   line_thickness: 0.5pt
+  #   space_above: 0.5cm
+  #   space_below: 0.3cm
+  # sections:
+  #   allow_page_break: true
+  #   space_between_regular_entries: 1.2em
+  #   space_between_text_based_entries: 0.3em
+  #   show_time_spans_in:
+  #     - experience
+  # entries:
+  #   date_and_location_width: 4.15cm
+  #   side_space: 0.2cm
+  #   space_between_columns: 0.1cm
+  #   allow_page_break: false
+  #   short_second_row: true
+  #   summary:
+  #     space_above: 0cm
+  #     space_left: 0cm
+  #   highlights:
+  #     bullet: •
+  #     nested_bullet: •
+  #     space_left: 0.15cm
+  #     space_above: 0cm
+  #     space_between_items: 0cm
+  #     space_between_bullet_and_text: 0.5em
+  # templates:
+  #   footer: '*NAME -- PAGE_NUMBER/TOTAL_PAGES*'
+  #   top_note: '*LAST_UPDATED CURRENT_DATE*'
+  #   single_date: MONTH_ABBREVIATION YEAR
+  #   date_range: START_DATE – END_DATE
+  #   time_span: HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS
+  #   one_line_entry:
+  #     main_column: '**LABEL:** DETAILS'
+  #   education_entry:
+  #     main_column: |-
+  #       **INSTITUTION**, AREA
+  #       SUMMARY
+  #       HIGHLIGHTS
+  #     degree_column: '**DEGREE**'
+  #     date_and_location_column: |-
+  #       LOCATION
+  #       DATE
+  #   normal_entry:
+  #     main_column: |-
+  #       **NAME**
+  #       SUMMARY
+  #       HIGHLIGHTS
+  #     date_and_location_column: |-
+  #       LOCATION
+  #       DATE
+  #   experience_entry:
+  #     main_column: |-
+  #       **COMPANY**, POSITION
+  #       SUMMARY
+  #       HIGHLIGHTS
+  #     date_and_location_column: |-
+  #       LOCATION
+  #       DATE
+  #   publication_entry:
+  #     main_column: |-
+  #       **TITLE**
+  #       SUMMARY
+  #       AUTHORS
+  #       URL (JOURNAL)
+  #     date_and_location_column: DATE
+locale:
+  language: english
+  # last_updated: Last updated in
+  # month: month
+  # months: months
+  # year: year
+  # years: years
+  # present: present
+  # month_abbreviations:
+  #   - Jan
+  #   - Feb
+  #   - Mar
+  #   - Apr
+  #   - May
+  #   - June
+  #   - July
+  #   - Aug
+  #   - Sept
+  #   - Oct
+  #   - Nov
+  #   - Dec
+  # month_names:
+  #   - January
+  #   - February
+  #   - March
+  #   - April
+  #   - May
+  #   - June
+  #   - July
+  #   - August
+  #   - September
+  #   - October
+  #   - November
+  #   - December
+settings:
+  current_date: '2026-02-22'
+  render_command:
+    design:
+    locale:
+    typst_path: ../rendercv_output/Anton_Vusatyi_CV_Senior_Software_Engineer.typ
+    pdf_path: ../rendercv_output/Anton_Vusatyi_CV_Senior_Software_Engineer.pdf
+    markdown_path: ../rendercv_output/Anton_Vusatyi_CV_Senior_Software_Engineer.md
+    html_path: ../rendercv_output/Anton_Vusatyi_CV_Senior_Software_Engineer.html
+    png_path: ../rendercv_output/Anton_Vusatyi_CV_Senior_Software_Engineer.png
+    dont_generate_markdown: false
+    dont_generate_html: false
+    dont_generate_typst: false
+    dont_generate_pdf: false
+    dont_generate_png: false
+  bold_keywords: []
